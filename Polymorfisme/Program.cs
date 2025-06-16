@@ -1,3 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using OefenOpdracht3;
 
-Console.WriteLine("Hello, World!");
+    var animals = new List<Animal>();
+    animals.Add(new Dog("Dogt"));
+    animals.Add(new Hamster("Hamstert"));
+
+    foreach (var animal in animals)
+    {
+        Console.WriteLine($"{animal.Name} is a {animal.GetKind()}");
+        animal.MakeSomeNoise();
+        
+        //Op het moment dat Animal imlemenatie is van IHasTail dan laten waggen. (Casten / Polymorfisme)
+        if (animal is IHasTail animalWithTail)
+        {
+            animalWithTail.Wag();
+        }
+    }
