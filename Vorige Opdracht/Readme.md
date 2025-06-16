@@ -3,30 +3,8 @@
 
 Unit Test:
 
-namespace FietsExample.Tests;
+![image](https://github.com/user-attachments/assets/2500e569-da1e-4fd8-a3fe-2d2b32e18342)
 
-public class Tests
-{
-    [SetUp]
-    public void Setup()
-    {
-    }
 
-    [Test]
-    public void AccuPrijsBerekenenJuist()
-    {
-        var accu = new Accu("Accu", 250f, 250);
-        float kostprijs = accu.BerekenKostprijs();
-        
-        Assert.That(kostprijs, Is.EqualTo(250));
-    }
-    
-    [Test]
-    public void AccuPrijsBerekenenFout()
-    {
-        var accu = new Accu("Accu", 250f, 250);
-        float kostprijs = accu.BerekenKostprijs() + 5;
+![image](https://github.com/user-attachments/assets/af1a6170-2cae-4e2b-8e09-9056bc36ad6d)
 
-        Assert.That(kostprijs, Is.Not.EqualTo(250));
-    }
-}
